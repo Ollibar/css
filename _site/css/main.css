@@ -61,6 +61,18 @@ h1 {
 a {
   color: #f00;
 }
+
+/*Header Styles */
+
+.header-nav a:hover,
+.header-nav a:active {
+  color: #ed6e2f;
+}
+.header-logo:hover,
+.header-logo:active {
+  opacity: 0.5;
+}
+
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -80,7 +92,11 @@ a {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  height: 25vh;
+}
+
+.full-hero:hover {
+  background-color: red;
 }
 
 /* SOCIAL STYLES */
@@ -100,6 +116,10 @@ a {
   text-decoration: none;
   vertical-align: middle;
   width: 2.5em;
+
+}
+.social-link:hover {
+  background-color: blue;
 }
 .social-list {
   list-style: none;
