@@ -21,19 +21,30 @@ h1 {
   font-size: 2em;
 }
 
+
       /* HERO STYLES */
       .full-hero {
         background-color: #c7dbfc;
         height: 50vh;
         width: 50vh;
+
+      }
+      .full-hero li {
+        display: inline;
       }
 
       /* SOCIAL STYLES */
       .social-link {
         background: rgba(150, 150, 150, 0.5);
         color: blue;
-      }
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+}
 
+      .show{
+        display: block;
+      }
       /* BIO STYLES */
       .bio-wrapper {
 
@@ -60,7 +71,7 @@ h1 {
       <h1>I'm an h1</h1>
       <ul>
         <li>
-          <a href="http://example.com/" class="social-link">Link</a>
+          <a href="http://example.com/" class="social-link show">Link</a>
         </li>
         <li>
           <a href="http://example.com/" class="social-link">Link</a>
