@@ -51,12 +51,21 @@ a img {
 
 
 /* GLOBAL STYLES */
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  padding-top: 10vh;
+  width: 100%;
+}
 html {
   box-shadow: 0 0 0 30px #000 inset;
   padding: 0 30px;
 }
 body {
+  display: flex;
+  flex-direction: column;
   font-family: helvetica, arial, sans;
+  min-height: 100vh;
 }
 h1 {
   font-size: 7vw;
@@ -125,6 +134,17 @@ h2 ~ p {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-links a:hover,
+.nav-links a:active {
+  color: #ed6e2f;
+}
 .header-nav a:hover,
 .header-nav a:active {
   color: #ed6e2f;
@@ -139,9 +159,9 @@ h2 ~ p {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  background-size: cover;
+  background-size: auto;
   box-sizing: border-box;
-  height: 100vh;
+  height: 190vh;
   padding-top: 10vh;
 }
 
@@ -159,6 +179,7 @@ h2 ~ p {
 .hero-home {
   background-image: url(/images/shark.jpg);
    background-position: center top;
+   background-size: auto;
 }
 .hero-content h1 {
   color: rgba(255, 255, 255, 0.8);
@@ -166,6 +187,7 @@ h2 ~ p {
   margin-bottom: 0.25em;
   text-align: center;
 }
+
 
 .hero-content .social-link {
   background-color: rgba(255, 255, 255, 0.8);
@@ -254,15 +276,75 @@ h2 ~ p {
   text-align: center;
 }
 .home-callout {
+  display: flex;
+  align-items: center;
   background-color: #000;
   color: #fff;
   padding: 7vh 0;
 }
+.home-callout h3 {
+  color: inherit;
+  margin-top: 1em;
+}
 .callout-title {
+  flex-grow: 1;
+  flex-basis: 0;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout-copy {
+  flex-shrink: 0;
+  flex-basis: 45em;
+  padding: 0 3vw;
   font-size: 0.8rem;
+}
+
+
+/* FOOTER STYLES */
+.footer {
+  background-color: #000;
+  padding: 10vh 0 15vh;
+  text-align: center;
+}
+.footer-logo img {
+  width: 50px;
+}
+.footer h3 {
+  color: #fff;
+  padding-top: 1.5em;
+  text-transform: uppercase;
+}
+.footer h3 span {
+  color: #aaa;
+}
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer-nav a {
+  color: #ccc;
+}
+
+/* COLUMN STYLES */
+.col-three {
+  display: flex;
+  flex:0 0 auto;
+
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1;
+}
+.col-three .col-aside {
+  flex: 0 1 20em
 }
